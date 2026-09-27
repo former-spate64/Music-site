@@ -1,3 +1,8 @@
+#div {
+position: fixed;
+width: 1920px;
+height: 1080;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,9 +11,10 @@ body {
 }
 #searchBox {
     position: fixed;
+    top: 2.5%;
     right: 12%;
     width: 70%;
-    padding: 10px;
+    padding: 0.75%;
     border: 1px solid rgb(0, 0, 0, 0.5);
     background-color: rgb(32, 32, 32, 0.8);
     border-radius: 12px;
@@ -18,33 +24,32 @@ body {
 }
 #searchButton {
     position: fixed;
-    width: 5%;
-    height: 3.5%;
-    right: 6%;
-    top: 2.35%;
-    padding: 10px 20px;
+    width: 6%;
+    height: 4%;
+    right: 5%;
+    top: 3%;
+    padding: 0.75% 1.5%;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     transition: transform 0.2s;
 }
 #searchtext {
     position: absolute;
-    top: 4%;
-    left: 62%;
-    transform: translate(-50%, -50%);
-    font-size: 16px;
+    top: -7.5;
+    left: 2vw;
+    font-size: 1vw;
     font-weight: bold;
 }
 #searchicon {
     position: absolute;
     top: 50%;
-    left: 7%;
+    left: 7.5%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    width: 25%;
+    height: 70%;
     transition: transform 0.3s;
 }
 #searchButton:hover {
@@ -97,9 +102,9 @@ body {
     text-align: center;
     #menutext {
     position: absolute;
-    top: -34%;
-    right: 40%;
-    font-size: 50px;
+    top: -2.25vw;
+    right: 5.5vw;
+    font-size: 3vw;
     font-weight: bold;
     color: rgb(255, 255, 255);
     }
@@ -190,7 +195,7 @@ body {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: absolute;
     }
     #box3:hover {
     background-color: rgb(72, 72, 72);
@@ -220,7 +225,7 @@ body {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: absolute;
     }
     #box4:hover {
     background-color: rgb(72, 72, 72);
@@ -250,7 +255,7 @@ body {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: absolute;
     }
     #box5:hover {
     background-color: rgb(72, 72, 72);
@@ -312,15 +317,15 @@ body {
 }
 #profileButton {
     position: fixed;
-    top: 1.6%;
-    right: 1.2%;
-    width: 3%;
+    top: 2.5%;
+    right: 0.5%;
+    width: 4vw;
     height: 5%;
     background-color: transparent;
     border: none;
     cursor: pointer;
     #profilepng {
-    width: 100%;
+    width: 85%;
     height: 100%;
     background-color: transparent;
     shape-outside: circle(50%);
@@ -348,6 +353,16 @@ body {
     right: -10%;
     background-color: rgb(100, 100, 100);
     border-radius: 12px;
+    #settingspng {
+        position: absolute;
+        scale: 0.06;
+        top: -58.5%;
+        right: -392%;
+        pointer-events: none;
+        transition: transform 0.3s ease;
+        transform: rotate(0deg);
+
+    }
 }
     #profile1 {
         position: absolute;
@@ -365,6 +380,11 @@ body {
         transition: transform 0.25s, translateX 0.25s;
         transform: scaleX(3) translateX(-33.5%);
         cursor: pointer;
+        #settingspng {
+    position: absolute;
+    transition: transform 0.3s;
+    transform: rotate(15deg);
+    }
     }
     #profile1:active {
         background-color: rgb(200, 200, 200);
@@ -458,7 +478,7 @@ body {
         position: absolute;
         top: 20%;
         right: 8%;
-        font-size: 50px;
+        font-size: 3vw;
         color: rgb(255, 255, 255);
         font-weight: bold;
         pointer-events: none;
@@ -474,9 +494,9 @@ body {
     }
     #library {
         position: absolute;
-        top: 22.5%;
+        top: 20%;
         right: 5%;
-        font-size: 48px;
+        font-size: 2.8vw;
         color: rgb(255, 255, 255);
         font-weight: bold;
         pointer-events: none;
@@ -484,7 +504,7 @@ body {
     #libraryicon {
         position: absolute;
         top: 20%;
-        right: 70%;
+        right: 72.5%;
         width: 20%;
         height: 60%;
         pointer-events: none;
@@ -494,7 +514,7 @@ body {
         position: absolute;
         top: 21%;
         right: 4%;
-        font-size: 46px;
+        font-size: 2.5vw;
         color: rgb(255, 255, 255);
         font-weight: bold;
         pointer-events: none;
@@ -510,16 +530,16 @@ body {
     }
     #donate {
         position: absolute;
-        top: 20%;
-        right: 8%;
-        font-size: 50px;
+        top: 1.5vh;
+        right: 0.75vw;
+        font-size: 3vw;
         color: rgb(255, 255, 255);
         font-weight: bold;
         pointer-events: none;
     }
     #donateicon {
         position: absolute;
-        top: 20%;
+        top: 18%;
         right: 75%;
         width: 20%;
         height: 60%;
@@ -530,7 +550,69 @@ body {
         position: absolute;
         bottom: 2%;
         right: 40%;
-        font-size: 14px;
+        font-size: 1vw;
         color: rgb(255, 255, 255);
         pointer-events: none;
+    }
+    #audioplayback {
+        position: fixed;
+        bottom: -15%;
+        right: 35%;
+        width: 20%;
+        height: 20%;
+    }
+    #songname {
+        position: absolute;
+        top: -25%;
+        left: -15%;
+    }
+    #backbutton {
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        right: 90%;
+        top: -5%;
+        border-radius: 12px;
+        transition: transform 0.2s;
+        transform: scale(1);
+    }
+    #backbutton:hover {
+        transition: transform 0.2s;
+        transform: scale(1.05);
+    }
+    #backbutton:active {
+        transition: transform 0.2s;
+        transform: scale(0.95);
+    }
+    #pausebutton {
+        position: absolute;
+        width: 30%;
+        height: 30%;
+        right: 57.5%;
+        top: -7.5%;
+        border-radius: 12px;
+    }
+    #pausebutton:hover {
+        transition: transform 0.2s;
+        transform: scale(1.05);
+    }
+    #pausebutton:active {
+        transition: transform 0.2s;
+        transform: scale(0.95);
+    }
+    #skipbutton {
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        right: 30%;
+        top: -5%;
+        border-radius: 12px;
+    }
+    #skipbutton:hover {
+        transition: transform 0.2s;
+        transform: scale(1.05);
+    }
+    #skipbutton:active {
+        transition: transform 0.2s;
+        transform: scale(0.95);
     }

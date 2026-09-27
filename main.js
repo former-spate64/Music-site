@@ -1,3 +1,7 @@
+const Audio1 = document.getElementById("Background music");
+const backbutton = document.getElementById("backbutton");
+const pausebutton = document.getElementById("pausebutton");
+const skipbutton = document.getElementById("skipbutton");
 const closebutton = document.getElementById("closebutton");
 const profilebutton = document.getElementById("ProfileButton");
 const container1 = document.getElementById("container1");
@@ -10,6 +14,7 @@ const profile = document.getElementById("profile");
 const searchBox = document.getElementById("searchBox");
 let State = false;
 let profileState = false;
+let music_state = false;
 closebutton.addEventListener("click", function() {
     if (State === false) {
         container1.style.transition = "left 0.3s ease";
@@ -58,3 +63,34 @@ profilebutton.addEventListener("click", function() {
         profile.style.right = "-4.5%";
     }
 })
+document.addEventListener("keypress", function (event) {
+    if (event.key === " ") {
+    pausebutton.click();
+    }});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "k") {
+    pausebutton.click();
+    }});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "l") {
+    skipbutton.click();
+    }});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "j") {
+    backbutton.click();
+    }});
+backbutton.addEventListener("click", function() {
+
+});
+pausebutton.addEventListener("click", function() {
+if (music_state === true) {
+Audio1.pause();
+music_state = false;
+} else {
+Audio1.play();
+music_state = true;
+}
+});
+skipbutton.addEventListener("click", function() {
+
+});

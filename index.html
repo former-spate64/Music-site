@@ -1,11 +1,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Music Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <audio id="Background music" src="Assets/Background music.mp3"></audio>
+    <div id="div">
     <input type="text" id="searchBox" placeholder="Find your vibe...">
     <button id="searchButton">
         <p id="searchtext">Search</p>
@@ -21,6 +23,11 @@
         <box id="profile3"></box>
         <box id="profile4"></box>
         <box id="profile5"></box>
+        <image id="settingspng" src="Assets/setting.png"></image>
+        <image id="profile2png" src="settings"></image>
+        <image id="profile3png" src="settings"></image>
+        <image id="profile4png" src="settings"></image>
+        <image id="profile5png" src="settings"></image>
     </container>
     <container id="container1">
         <box id="box1">
@@ -51,6 +58,13 @@
         </box>
         <p id="version">Version 1.0</p>
     </container>
+    <container id="audioplayback">
+        <textbox id="songname">Error code 404:Song not found</textbox>
+        <button id="backbutton">back</button>
+        <button id="pausebutton">play/pause</button>
+        <button id="skipbutton">skip</button>
+    </container>
     <script src="main.js"></script>
 </body>
+</div>
 </html>
