@@ -1,3 +1,4 @@
+const allAudio = document.querySelectorAll('audio');
 const Audio1 = document.getElementById("Background music");
 const backbutton = document.getElementById("backbutton");
 const pausebutton = document.getElementById("pausebutton");
@@ -79,6 +80,14 @@ document.addEventListener("keypress", function (event) {
     if (event.key === "j") {
     backbutton.click();
     }});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "1") {
+    allAudio.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    Audio1.play();
+    music_state = true;
+    })}});
 backbutton.addEventListener("click", function() {
 
 });
