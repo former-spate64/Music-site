@@ -563,8 +563,19 @@ body {
     }
     #songname {
         position: absolute;
-        top: -25%;
-        left: -15%;
+        width: 100%;
+        top: -55%;
+        left: -23%;
+        text-align: center;
+        font-size: 1.3vw;
+    }
+    #songartist {
+        position: absolute;
+        width: 100%;
+        top: -35%;
+        left: -23%;
+        text-align: center;
+        font-size: 1vw;
     }
     #backbutton {
         position: absolute;

@@ -1,5 +1,16 @@
+const song_name = document.getElementById("songname");
+const song_artist = document.getElementById("songartist");
 const allAudio = document.querySelectorAll('audio');
-const Audio1 = document.getElementById("Background music");
+const Audio1 = document.getElementById("song1");
+const Audio2 = document.getElementById("song2");
+const Audio3 = document.getElementById("song3");
+const Audio4 = document.getElementById("song4");
+const Audio5 = document.getElementById("song5");
+const Audio6 = document.getElementById("song6");
+const Audio7 = document.getElementById("song7");
+const Audio8 = document.getElementById("song8");
+const Audio9 = document.getElementById("song9");
+const Audio0 = document.getElementById("song0");
 const backbutton = document.getElementById("backbutton");
 const pausebutton = document.getElementById("pausebutton");
 const skipbutton = document.getElementById("skipbutton");
@@ -16,6 +27,7 @@ const searchBox = document.getElementById("searchBox");
 let State = false;
 let profileState = false;
 let music_state = false;
+let current_song = null;
 closebutton.addEventListener("click", function() {
     if (State === false) {
         container1.style.transition = "left 0.3s ease";
@@ -87,19 +99,155 @@ document.addEventListener("keypress", function (event) {
         audio.currentTime = 0;
     Audio1.play();
     music_state = true;
+    current_song = Audio1;
+    showText(1);
+    })}});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "2") {
+    allAudio.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    Audio2.play();
+    music_state = true;
+    current_song = Audio2;
+    showText(2);
+    })}});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "3") {
+    allAudio.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    Audio3.play();
+    music_state = true;
+    current_song = Audio3;
+    showText(3);
+    })}});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "4") {
+    allAudio.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    Audio4.play();
+    music_state = true;
+    current_song = Audio4;
+    showText(4);
+    })}});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "5") {
+    allAudio.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    Audio5.play();
+    music_state = true;
+    current_song = Audio5;
+    showText(5);
+    })}});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "6") {
+    allAudio.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    Audio6.play();
+    music_state = true;
+    current_song = Audio6;
+    showText(6);
+    })}});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "7") {
+    allAudio.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    Audio7.play();
+    music_state = true;
+    current_song = Audio7;
+    showText(7);
+    })}});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "8") {
+    allAudio.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    Audio8.play();
+    music_state = true;
+    current_song = Audio8;
+    showText(8);
+    })}});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "9") {
+    allAudio.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    Audio9.play();
+    music_state = true;
+    current_song = Audio9;
+    showText(9);
+    })}});
+document.addEventListener("keypress", function (event) {
+    if (event.key === "0") {
+    allAudio.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    Audio0.play();
+    music_state = true;
+    current_song = Audio0;
+    showText(10);
     })}});
 backbutton.addEventListener("click", function() {
-
+current_song.currentTime = 0;
 });
 pausebutton.addEventListener("click", function() {
 if (music_state === true) {
-Audio1.pause();
+current_song.pause();
 music_state = false;
 } else {
-Audio1.play();
+current_song.play();
 music_state = true;
 }
 });
 skipbutton.addEventListener("click", function() {
 
 });
+
+
+async function showText(number) {
+    if (number === 1) {
+        song_name.innerHTML = "Lime coconut";
+        song_artist.innerHTML = "Harry Nilsson";
+    }
+    if (number === 2) {
+        song_name.innerHTML = "Don't forget your roots";
+        song_artist.innerHTML = "Six60";
+    }
+    if (number === 3) {
+        song_name.innerHTML = "24/7";
+        song_artist.innerHTML = "Common Kings";
+    }
+    if (number === 4) {
+        song_name.innerHTML = "Take it away";
+        song_artist.innerHTML = "L.A.B";
+    }
+    if (number === 5) {
+        song_name.innerHTML = "Bills";
+        song_artist.innerHTML = "LunchMoney Lewis";
+    }
+    if (number === 6) {
+        song_name.innerHTML = "Cool it down";
+        song_artist.innerHTML = "Coolio";
+    }
+    if (number === 7) {
+        song_name.innerHTML = "Everybody have fun tonight";
+        song_artist.innerHTML = "Wang Chung";
+    }
+    if (number === 8) {
+        song_name.innerHTML = "Go your own way";
+        song_artist.innerHTML = "Fleetwood Mac";
+    }
+    if (number === 9) {
+        song_name.innerHTML = "Aye como va";
+        song_artist.innerHTML = "Santana";
+    }
+    if (number === 10) {
+        song_name.innerHTML = "Overpass graffiti";
+        song_artist.innerHTML = "Ed Sheeran";
+    }
+}
